@@ -1,0 +1,16 @@
+EV Fleet Predictive Maintenance 프로젝트 주요 대화 및 분석 요약
+
+- Idle_Ratio_1h(최근 1시간 Idle 비율) 피처 생성 및 시각화
+    - 고장 이벤트별(boxplot) Idle_Ratio_1h 비교 결과, 일부 고장 집단에서 Idle 비율이 높게 나타남
+    - 공회전이 고장과 연관된 신호일 가능성 확인
+- Idle_Ratio_1h 피처를 모델에 포함하여 LightGBM 재학습
+    - 성능(MAE, RMSE) 및 피처 중요도 평가
+    - Idle_Ratio_1h가 예측에 기여하는지 확인
+- 추가 파생 피처 및 오차 분석, 서비스/솔루션 제안 등 다음 단계 논의
+- VS Code 종료 시 Copilot 대화 기록은 저장되지 않으므로, 주요 내용은 노트북 셀 또는 별도 파일로 기록 필요
+
+향후 진행 추천
+1. Idle_Ratio_1h 피처 포함 모델 성능 비교 및 해석
+2. 추가 파생 피처(rolling std, max 등) 실험
+3. 오차가 큰 구간/샘플 집중 분석
+4. 서비스/솔루션 구체화 및 보고서/발표자료 보완
